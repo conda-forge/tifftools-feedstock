@@ -10,7 +10,7 @@ source:
   sha256: 780707433e8dc96a23790c5a3edc89869aabaab1bab8883fbc534977769ff695
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -23,7 +23,7 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.6
-    - setuptools_scm
+    - setuptools
 
 test:
   imports:
