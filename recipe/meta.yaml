@@ -1,5 +1,5 @@
 {% set name = "tifftools" %}
-{% set version = "1.2.9" %}
+{% set version = "1.2.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +7,21 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.zip
-  sha256: 780707433e8dc96a23790c5a3edc89869aabaab1bab8883fbc534977769ff695
+  sha256: 391e6825933225a2380bface0207ee2a8a5bc2e36a561aea865046a6cf46f461
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
-      - tifftools = tifftools:main
+    - tifftools = tifftools:main
 
 requirements:
   host:
     - python >=3.6
     - pip
     - setuptools_scm
+    - importlib-metadata
   run:
     - python >=3.6
     - setuptools
