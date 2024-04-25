@@ -1,5 +1,5 @@
 {% set name = "tifftools" %}
-{% set version = "1.5.0" %}
+{% set version = "1.5.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('_', '-') }}-{{ version }}.tar.gz
-  sha256: 399146af345bb165cc00f0553ac963c72fa8b10a3baa4e71f576ff6ea9c7bfb9
+  sha256: 8b9a302227c36a9c5f2a0afbe84afd06b836846a841b68ed6f69f7370028a15f
 
 build:
   number: 0
