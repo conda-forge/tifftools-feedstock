@@ -1,5 +1,6 @@
 {% set name = "tifftools" %}
 {% set version = "1.6.0" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -10,7 +11,7 @@ source:
   sha256: f6536c09cd03e1fb1b3281356b932117fc9e0b19c4a4b7f063dbec04596c234a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
   entry_points:
@@ -20,6 +21,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
+    - setuptools
     - setuptools_scm
     - importlib-metadata
   run:
